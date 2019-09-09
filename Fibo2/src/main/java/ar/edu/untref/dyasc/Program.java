@@ -10,6 +10,8 @@ public class Program {
     	String[] param1 = codigo.split("=");
     	String param2 = "";
     	int opcion = 0;
+    	Fibonacci numero = new Fibonacci();
+    	Formato secuencia = new Formato();
     	
     	if (param1[0].equals("-o") == false) {
     		cantidad = Integer.valueOf(args[0]);
@@ -20,14 +22,12 @@ public class Program {
 			opcion = 1;
 		}
     	
-    	Fibonacci numero = new Fibonacci();
     	cadena = numero.obtenerSecuencia(cantidad);
     	
-    	Imprimir secuencia = new Imprimir();
     	if (opcion == 0) {
-    		secuencia.mostrarAPedido("hd",cantidad,cadena);
+    		System.out.println(secuencia.mostrarAPedido("hd",cantidad,cadena));
 		} else {
-			secuencia.mostrarAPedido(param2,cantidad,cadena);
+			System.out.println(secuencia.mostrarAPedido(param2,cantidad,cadena));
 		}
     	
     }
