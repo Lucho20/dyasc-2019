@@ -26,7 +26,7 @@ public class Formato {
 	        }
 		}
 		else {
-			cadena = "Opciones no validas.";
+			cadena = "Opción no válida.";
 		}
 		
 		return cadena;

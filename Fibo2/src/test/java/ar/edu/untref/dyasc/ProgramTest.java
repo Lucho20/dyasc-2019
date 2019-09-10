@@ -24,7 +24,7 @@ public class ProgramTest {
 		// Prueba 4
 		cadena = numero.obtenerSecuencia(8);
 		resultado = secuencia.mostrarAPedido("xy", 8, cadena);
-		Assert.assertTrue(resultado.equals("Opciones no validas."));
+		Assert.assertTrue(resultado.equals("Opción no válida."));
 		// Prueba 5
 		cadena = numero.obtenerSecuencia(8);
 		resultado = secuencia.mostrarAPedido("hd", 8, cadena);
