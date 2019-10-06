@@ -78,13 +78,13 @@ public class GeneradorFibonacciTest {
     }
     
     // Prueba 9
-    /*@Test
+    @Test
     public void probarGenerador9() {
         GeneradorFibonacci resultado = new GeneradorFibonacci();
         String[] parametrosIngresados = {"-o=vd","-f=salida.txt","5"}; 
         String solucion = resultado.obtenerResultado(parametrosIngresados);
         Assert.assertTrue(solucion.equals("fibo<5> guardado en salida.txt"));
-    }*/
+    }
     
     // Prueba 10
     @Test
@@ -96,13 +96,13 @@ public class GeneradorFibonacciTest {
     }
     
     // Prueba 11
-    /*@Test
+    @Test
     public void probarGenerador11() {
         GeneradorFibonacci resultado = new GeneradorFibonacci();
-        String[] parametrosIngresados = {"-o=vd","-f=salida.txt","-m=s","5"}; 
+        String[] parametrosIngresados = {"-o=vd","-f=salida1.txt","-m=s","5"}; 
         String solucion = resultado.obtenerResultado(parametrosIngresados);
-        Assert.assertTrue(solucion.equals("fibo<5> guardado en salida.txt"));
-    }*/
+        Assert.assertTrue(solucion.equals("fibo<5> guardado en salida1.txt"));
+    }
     
     // Prueba 12
     @Test
@@ -131,5 +131,50 @@ public class GeneradorFibonacciTest {
         String solucion1 = resultado.obtenerResultado(parametrosIngresados);
         String solucion2 = resultado.validarFormatoTipoM(sucesion, "l", "vd");
         Assert.assertTrue(solucion1.equals(solucion2));
+    }
+    
+    // Prueba 15
+    @Test
+    public void probarGenerador15() {
+        GeneradorFibonacci resultado = new GeneradorFibonacci();
+        String[] parametrosIngresados = {"-o=vd","-m=s","5"}; 
+        String solucion = resultado.obtenerResultado(parametrosIngresados);
+        Assert.assertTrue(solucion.equals("fibo<5>s: \n7"));
+    }
+    
+    // Prueba 16
+    @Test
+    public void probarGenerador16() {
+        GeneradorFibonacci resultado = new GeneradorFibonacci();
+        String[] parametrosIngresados = {"-o=vi","-f=salida2.txt","-m=l","5"}; 
+        String solucion = resultado.obtenerResultado(parametrosIngresados);
+        Assert.assertTrue(solucion.equals("fibo<5> guardado en salida2.txt"));
+    }
+    
+    // Prueba 17
+    @Test
+    public void probarGenerador17() {
+        GeneradorFibonacci resultado = new GeneradorFibonacci();
+        String[] parametrosIngresados = {"-o=hi","-f=salida3.txt","-m=l","5"}; 
+        String solucion = resultado.obtenerResultado(parametrosIngresados);
+        Assert.assertTrue(solucion.equals("fibo<5> guardado en salida3.txt"));
+    }
+    
+    // Prueba 18
+    @Test
+    public void probarGenerador18() {
+        GeneradorFibonacci resultado = new GeneradorFibonacci();
+        String[] parametrosIngresados = {"-o=hi","-m=s","5"}; 
+        String solucion = resultado.obtenerResultado(parametrosIngresados);
+        Assert.assertTrue(solucion.equals("fibo<5>s: 7"));
+    }
+    
+    // Prueba 19
+    @Test
+    public void probarGenerador19() {
+        GeneradorFibonacci resultado = new GeneradorFibonacci();
+        String[] parametrosIngresados = {"-o=hd","-f=salida4.txt","-m=s","6"}; 
+        String solucion = resultado.obtenerResultado(parametrosIngresados);
+        Assert.assertTrue(solucion.equals("fibo<6> guardado en salida4.txt"));
     }
 }
