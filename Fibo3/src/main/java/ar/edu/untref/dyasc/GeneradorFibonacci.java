@@ -13,7 +13,7 @@ public class GeneradorFibonacci {
         }
         // Generacion de Secuencia Horizontal-Directa
         else if (codigo.equals("hd")) {
-            FormatoFibonacci resultado = new HorizontalDerechaFibonacci();
+            FormatoFibonacci resultado = new HorizontalDirectaFibonacci();
             cadena = resultado.obtenerResultado(secuencia, cantidadPedida);
         }
         // Generacion de Secuencia Vertical-Invertida
@@ -23,7 +23,7 @@ public class GeneradorFibonacci {
         }
         // Generacion de Secuencia Vertical-Directa
         else if (codigo.equals("vd")) {
-            FormatoFibonacci resultado = new VerticalDerechaFibonacci();
+            FormatoFibonacci resultado = new VerticalDirectaFibonacci();
             cadena = resultado.obtenerResultado(secuencia, cantidadPedida);
         }
         else {
