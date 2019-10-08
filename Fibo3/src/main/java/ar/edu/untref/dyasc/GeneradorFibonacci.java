@@ -6,24 +6,25 @@ public class GeneradorFibonacci {
     
     public String validarFormatoImpresion(String codigo, int cantidadPedida, int[] secuencia) {
         String cadena = "";
+        FormatoFibonacci resultado = null;
         // Generacion de Secuencia Horizontal-Invertida
         if (codigo.equals("hi")) {
-            FormatoFibonacci resultado = new HorizontalInvertidaFibonacci();
+            resultado = new HorizontalInvertidaFibonacci();
             cadena = resultado.obtenerResultado(secuencia, cantidadPedida);
         }
         // Generacion de Secuencia Horizontal-Directa
         else if (codigo.equals("hd")) {
-            FormatoFibonacci resultado = new HorizontalDirectaFibonacci();
+            resultado = new HorizontalDirectaFibonacci();
             cadena = resultado.obtenerResultado(secuencia, cantidadPedida);
         }
         // Generacion de Secuencia Vertical-Invertida
         else if (codigo.equals("vi")) {
-            FormatoFibonacci resultado = new VerticalInvertidaFibonacci();
+            resultado = new VerticalInvertidaFibonacci();
             cadena = resultado.obtenerResultado(secuencia, cantidadPedida);
         }
         // Generacion de Secuencia Vertical-Directa
         else if (codigo.equals("vd")) {
-            FormatoFibonacci resultado = new VerticalDirectaFibonacci();
+            resultado = new VerticalDirectaFibonacci();
             cadena = resultado.obtenerResultado(secuencia, cantidadPedida);
         }
         else {
